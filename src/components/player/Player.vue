@@ -94,7 +94,7 @@
       />
     </div>
     <div class="row justify-center">
-      <div class="col-6 q-pa-xl">
+      <div class="col q-pa-xl">
         <field-heat-map />
       </div>
     </div>

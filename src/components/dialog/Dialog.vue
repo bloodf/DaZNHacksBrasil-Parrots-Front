@@ -1,6 +1,7 @@
 <template>
   <q-dialog
     content-style="padding: 0px"
+    content-class="bg-primary "
     :value="value"
     position="right"
     @input="$emit('input', $event)">
@@ -37,8 +38,7 @@
         </q-tabs>
       </q-footer>
       <q-page-container
-        class="bg-primary text-white"
-        style="min-height: 100vh"
+        class="text-white"
       >
         <component :is="activeTab.component"
                    class="fit" />
