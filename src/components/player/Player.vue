@@ -24,7 +24,7 @@
       <div class="col-8 q-pa-md">
         <div class="row">
           <div class="col-12">
-            <h4 class="header-font no-margin">Player Name</h4>
+            <h4 class="header-font no-margin">KUN AGÜERO</h4>
           </div>
           <div class="col-12">
             <div class="row player-info">
@@ -32,15 +32,17 @@
                 <div class="row">
                   <div class="col-12">
                     <p class="header-font">Place of Birth</p>
-                    <p>City</p>
+                    <p>Buenos Aires, Argentina</p>
                   </div>
                   <div class="col-12">
                     <p class="header-font">Nationality</p>
-                    <p>City</p>
+                    <p>Argentina</p>
+                    <p>Spain</p>
                   </div>
                   <div class="col-12">
                     <p class="header-font">Position</p>
-                    <p>City</p>
+                    <p>Centre Forward</p>
+                    <p>Offensive Midfielder</p>
                   </div>
                 </div>
               </div>
@@ -48,15 +50,15 @@
                 <div class="row">
                   <div class="col-12">
                     <p class="header-font">Height</p>
-                    <p>City</p>
+                    <p>172 cm</p>
                   </div>
                   <div class="col-12">
                     <p class="header-font">Weight</p>
-                    <p>City</p>
+                    <p>74 Kg</p>
                   </div>
                   <div class="col-12">
                     <p class="header-font">Foot</p>
-                    <p>City</p>
+                    <p>Booth</p>
                   </div>
                 </div>
               </div>

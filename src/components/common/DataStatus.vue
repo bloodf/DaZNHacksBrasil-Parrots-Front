@@ -14,23 +14,25 @@
         default: '',
       },
       value: {
-        type: String,
+        type: [String, Number],
         required: false,
         default: '',
-      }
-    }
+      },
+    },
   };
 </script>
 <style scoped>
-  .title{
+  .title {
     font-size: 1rem;
     margin: 0;
   }
-  .value{
+
+  .value {
     font-size: 3rem;
     margin: 0;
   }
-  .match-status{
+
+  .match-status {
     padding-top: 1rem;
     width: 50%;
     border-bottom: 1px solid #595F62;

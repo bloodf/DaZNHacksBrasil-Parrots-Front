@@ -7,8 +7,8 @@
     </div>
     <div class="col text-center">
       <score-board
-        :away="awayGoals"
-        :home="homeGoals"
+        :away="goals.away"
+        :home="goals.home"
       />
     </div>
     <div class="col text-right">
@@ -27,9 +27,8 @@
     name: 'MatchScore',
     components: { ScoreBoard, TeamShield },
     computed: {
-      ...mapGetters('Team', [
-        'awayGoals',
-        'homeGoals',
+      ...mapGetters('Match',[
+        'goals',
       ]),
     },
   };
