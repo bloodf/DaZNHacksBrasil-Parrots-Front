@@ -1,7 +1,6 @@
 <template>
   <q-dialog
     content-style="padding: 0px"
-    content-class="bg-primary "
     :value="value"
     position="right"
     @input="$emit('input', $event)">
@@ -10,7 +9,7 @@
       container
       style="height: 100vh; border-radius: 0px;"
       :style="$q.screen.lt.md ? 'min-width: 100%' : 'min-width: 750px'"
-      class="no-shadow"
+      class="no-shadow bg-primary"
     >
       <q-header class="bg-primary">
         <q-toolbar>
