@@ -1,4 +1,16 @@
 export default {
   LOADING: 'LOADING',
   SET_MATCH_STATS: 'SET_MATCH_STATS',
+  GoalAttempt: 'GoalAttempt',
+  Goal: 'Goal',
+  Foul: 'Foul',
+  KeyPass: 'KeyPass',
+  Pass: 'Pass',
+  Intercept: 'Intercept',
+  BallPossesion: 'BallPossesion',
+  Assist: 'Assist',
+  CornerKick: 'CornerKick',
+  CrossAttack: 'CrossAttack',
+  CounterAttack: 'CounterAttack',
+  Dribble: 'Dribble',
 }

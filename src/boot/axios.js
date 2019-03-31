@@ -12,10 +12,5 @@ export default async ({ store, Vue }) => {
   Vue.use(new VueSocketIO({
     debug: true,
     connection: SocketIO('https://warm-woodland-81988.herokuapp.com'),
-    vuex: {
-      store,
-      actionPrefix: 'SOCKET_',
-      mutationPrefix: 'SOCKET_'
-    },
   }))
 };
