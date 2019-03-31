@@ -33,10 +33,9 @@
       });
     },
     watch: {
-      heatMapData(newValue) {
+      heatMapData: debounce(function (newValue) {
         this.addData(newValue);
-        this.heatMap.repaint();
-      },
+      }, 500),
     },
     computed: {
       ...mapGetters('Player', [
@@ -51,6 +50,7 @@
       addData(dataPoint) {
         this.heatMap.addData(dataPoint);
         this.heatMap.repaint();
+        this.$emit('input', this.heatMap.getData());
       },
     },
   }
