@@ -73,6 +73,26 @@
     components: { MatchScore, MatchStatus },
     async beforeMount() {
       await this.getMatch();
+      this.sockets.subscribe('event', (data) => {
+        if (data.type === 'GOAL') {
+          this.addGoal(data.team)
+        }
+        if (data.type === 'FOUL') {
+          this.addFoul(data.team);
+        }
+        if (data.type === 'BALL_POSSESSION') {
+          this.addBallPossesion(data.team);
+        }
+        if (data.type === 'CORNER_KICK') {
+          this.addCornerKick(data.team);
+        }
+        if (data.type === 'CROSS_ATTACK') {
+          this.addCrossAttack(data.team);
+        }
+        if (data.type === 'COUNTER_ATTACK') {
+          this.addCounterAttack(data.team);
+        }
+      });
     },
     computed: {
       ...mapGetters('Match', [
@@ -84,6 +104,17 @@
     methods: {
       ...mapActions('Match', [
         'getMatch',
+        'addGoal',
+        'addFoul',
+        'addKeyPass',
+        'addPass',
+        'addIntercept',
+        'addBallPossesion',
+        'addAssist',
+        'addCornerKick',
+        'addCrossAttack',
+        'addCounterAttack',
+        'addDribble',
       ]),
     },
   }

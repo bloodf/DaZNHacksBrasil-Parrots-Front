@@ -14,42 +14,47 @@ export async function getMatch({ commit }) {
   }
 
 }
-export function Goal({commit}, team){
-  commit(MT.Goal);
+
+export function addGoal({ commit }, team) {
+  commit(MT.Goal, team);
 }
 
-export function Foul({commit}, team){
-  commit(MT.Foul);
+export function addFoul({ commit }, team) {
+  commit(MT.Foul, team);
 }
 
-export function KeyPass({commit}, team){
-  commit(MT.KeyPass);
+export function addKeyPass({ commit }, team) {
+  commit(MT.KeyPass, team);
 }
 
-export function Pass({commit}, team){
-  commit(MT.Pass);
+export function addPass({ commit }, team) {
+  commit(MT.Pass, team);
 }
 
-export function Intercept({commit}, team){
-  commit(MT.Intercept);
+export function addIntercept({ commit }, team) {
+  commit(MT.Intercept, team);
 }
 
-export function BallPossesion({commit}, team){
-  commit(MT.BallPossesion);
+export function addBallPossesion({ commit }, team) {
+  commit(MT.BallPossesion, team);
 }
 
-export function Assist({commit}, team){
-  commit(MT.Assist);
+export function addAssist({ commit }, team) {
+  commit(MT.Assist, team);
 }
-export function CornerKick({commit}, team){
-  commit(MT.CornerKick);
+
+export function addCornerKick({ commit }, team) {
+  commit(MT.CornerKick, team);
 }
-export function CrossAttack({commit}, team){
-  commit(MT.CrossAttack);
+
+export function addCrossAttack({ commit }, team) {
+  commit(MT.CrossAttack, team);
 }
-export function CounterAttack({commit}, team){
-  commit(MT.CounterAttack);
+
+export function addCounterAttack({ commit }, team) {
+  commit(MT.CounterAttack, team);
 }
-export function Dribble({commit}, team){
-  commit(MT.Dribble);
+
+export function addDribble({ commit }, team) {
+  commit(MT.Dribble, team);
 }
