@@ -25,6 +25,10 @@ export async function getHeatMap({ commit }) {
   }
 }
 
+export function addHeatMap({commit}, data){
+  commit(MT.SET_PLAYER_HEATMAP, data);
+}
+
 export function addGoal({commit}, team){
   commit(MT.Goal);
 }

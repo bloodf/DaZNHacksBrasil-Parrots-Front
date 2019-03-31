@@ -10,7 +10,7 @@ export const AxiosDriver = axios.create({
 export default async ({ store, Vue }) => {
   Vue.prototype.$axios = AxiosDriver;
   Vue.use(new VueSocketIO({
-    debug: true,
+    debug: false,
     connection: SocketIO('https://warm-woodland-81988.herokuapp.com'),
   }))
 };

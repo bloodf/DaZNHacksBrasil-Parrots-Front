@@ -12,7 +12,7 @@
 <script>
   import { uid, debounce } from 'quasar';
   import heatMapJS from 'heatmap.js';
-  import { mapGetters } from 'vuex';
+  import { mapGetters, mapActions } from 'vuex';
 
   export default {
     name: 'FieldHeatMap',
@@ -28,13 +28,14 @@
         minOpacity: 0,
         blur: .75,
       });
+      this.sockets.subscribe('heatmap', function (data) {
+        this.addHeatMap(data);
+      });
     },
     watch: {
-      heatMapData: {
-        handler(newValue) {
-          this.addData(newValue);
-        },
-        deep: true,
+      heatMapData(newValue) {
+        this.addData(newValue);
+        this.heatMap.repaint();
       },
     },
     computed: {
@@ -43,6 +44,7 @@
       ]),
     },
     methods: {
+      ...mapActions('Player', ['addHeatMap']),
       reDraw: debounce(function () {
         this.heatMap.repaint();
       }, 250),

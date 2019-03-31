@@ -137,6 +137,7 @@
           this.addDribble(data.team);
         }
       });
+
     },
     computed: {
       ...mapGetters('Player', [
