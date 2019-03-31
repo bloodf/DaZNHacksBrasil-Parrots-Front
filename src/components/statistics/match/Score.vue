@@ -1,5 +1,5 @@
 <template>
-  <div class="row justify-center">
+  <div class="row justify-center items-center fit">
     <div class="col"><span class="header-font score-size">{{home}}</span></div>
     <div class="col"><span class="header-font score-x">x</span></div>
     <div class="col"><span class="header-font score-size">{{away}}</span></div>
@@ -24,11 +24,9 @@
 </script>
 <style scoped>
   .score-size {
-    font-size: 4rem;
+    font-size: 2.5rem;
   }
   .score-x{
-    position: relative;
-    top: calc(50% - 1.5rem);
     font-size: 1.5rem;
   }
 

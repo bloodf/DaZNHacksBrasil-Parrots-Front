@@ -24,14 +24,14 @@
           inline-label
           indicator-color="accent"
           align="justify"
-          class="bg-tabs no-shadow no-border-radius full-width"
+          class="bg-tabs no-shadow no-border-radius full-width justify-between"
         >
           <q-tab
             v-for="tab in tabs"
             :key="tab.name"
             :name="tab.name"
             :icon="tab.icon"
-            :label="tab.title"
+            :label="$q.screen.lt.sm ? '' : tab.title"
             :ripple="false"
           />
         </q-tabs>

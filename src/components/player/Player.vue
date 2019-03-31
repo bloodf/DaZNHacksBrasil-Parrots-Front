@@ -68,31 +68,31 @@
     <div class="row">
       <data-status
         title="Goals"
-        value="0"
+        :value="playerData.goals"
       />
       <data-status
         title="Goals Attempts"
-        value="0"
+        :value="playerData.goalKicks"
       />
       <data-status
         title="Passes"
-        value="0"
+        :value="playerData.dribbles"
       />
       <data-status
         title="Key Passes"
-        value="0"
+        :value="playerData.keyPasses"
       />
       <data-status
         title="Assists"
-        value="0"
+        :value="playerData.assists"
       />
       <data-status
         title="Dribbles"
-        value="0"
+        :value="playerData.dribbles"
       />
     </div>
     <div class="row justify-center">
-      <div class="col-8 q-pa-xl">
+      <div class="col-6 q-pa-xl">
         <field-heat-map />
       </div>
     </div>
@@ -101,6 +101,7 @@
 <script>
   import DataStatus from '../common/DataStatus';
   import FieldHeatMap from '../heatmap/Field';
+  import { mapActions, mapGetters } from 'vuex';
 
   export default {
     name: 'Player',
@@ -111,6 +112,21 @@
         'Alan Smith', 'Gary Neville', 'Paul Scholes', 'Steve Coppell', 'Wayne Rooney',
       ],
     }),
+    async beforeMount() {
+      await this.getPlayerData();
+      await this.getHeatMap();
+    },
+    computed: {
+      ...mapGetters('Player', [
+        'playerData',
+      ]),
+    },
+    methods: {
+      ...mapActions('Player', [
+        'getPlayerData',
+        'getHeatMap',
+      ]),
+    },
   }
 </script>
 <style scoped>

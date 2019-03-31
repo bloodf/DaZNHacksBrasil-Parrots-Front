@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div class="row q-mb-md">
     <div class="col text-left">
       <team-shield
         src="https://s.hs-data.com/bilder/wappen/mittel/558.gif"

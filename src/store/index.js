@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import Team from './team';
+import Match from './match';
+import Player from './player';
 
 // import example from './module-example'
 
@@ -15,7 +17,9 @@ export default function (/* { ssrContext } */) {
   const Store = new Vuex.Store({
     modules: {
       // example
+      Match,
       Team,
+      Player,
     },
 
     // enable strict mode (adds overhead!)

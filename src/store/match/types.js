@@ -1,0 +1,4 @@
+export default {
+  LOADING: 'LOADING',
+  SET_MATCH_STATS: 'SET_MATCH_STATS',
+}
