@@ -117,6 +117,26 @@
     async beforeMount() {
       await this.getPlayerData();
       await this.getHeatMap();
+      this.sockets.subscribe('event', (data) => {
+        if (data.type === 'GOAL') {
+          this.addGoal(data.team)
+        }
+        if (data.type === 'KEY_PASS') {
+          this.addKeyPass(data.team);
+        }
+        if (data.type === 'PASS') {
+          this.addPass(data.team);
+        }
+        if (data.type === 'INTERCEPT') {
+          this.addIntercept(data.team);
+        }
+        if (data.type === 'ASSIST') {
+          this.addAssist(data.team);
+        }
+        if (data.type === 'DRIBBLE') {
+          this.addDribble(data.team);
+        }
+      });
     },
     computed: {
       ...mapGetters('Player', [
@@ -127,6 +147,12 @@
       ...mapActions('Player', [
         'getPlayerData',
         'getHeatMap',
+        'addGoal',
+        'addKeyPass',
+        'addPass',
+        'addIntercept',
+        'addAssist',
+        'addDribble',
       ]),
     },
   }

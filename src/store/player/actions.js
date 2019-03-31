@@ -25,42 +25,26 @@ export async function getHeatMap({ commit }) {
   }
 }
 
-export function Goal({commit}, team){
+export function addGoal({commit}, team){
   commit(MT.Goal);
 }
 
-export function Foul({commit}, team){
-  commit(MT.Foul);
-}
-
-export function KeyPass({commit}, team){
+export function addKeyPass({commit}, team){
   commit(MT.KeyPass);
 }
 
-export function Pass({commit}, team){
+export function addPass({commit}, team){
   commit(MT.Pass);
 }
 
-export function Intercept({commit}, team){
+export function addIntercept({commit}, team){
   commit(MT.Intercept);
 }
 
-export function BallPossesion({commit}, team){
-  commit(MT.BallPossesion);
-}
-
-export function Assist({commit}, team){
+export function addAssist({commit}, team){
   commit(MT.Assist);
 }
-export function CornerKick({commit}, team){
-  commit(MT.CornerKick);
-}
-export function CrossAttack({commit}, team){
-  commit(MT.CrossAttack);
-}
-export function CounterAttack({commit}, team){
-  commit(MT.CounterAttack);
-}
-export function Dribble({commit}, team){
+
+export function addDribble({commit}, team){
   commit(MT.Dribble);
 }

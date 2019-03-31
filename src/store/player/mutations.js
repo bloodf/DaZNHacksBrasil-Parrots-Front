@@ -10,19 +10,19 @@ export default {
   [MT.SET_PLAYER_HEATMAP](state, payload) {
     state.heatMap = payload.coords.map(c => ({ x: c.x, y: c.y, value: c.value }));
   },
-  [MT.GoalAttempt](state, payload) {
-    state.data[`${payload}Team`]
+  [MT.Goal](state, payload) {
+    state.data.goals += 1;
   },
   [MT.KeyPass](state, payload) {
-    state.data[`${payload}Team`]
+    state.data.keyPasses += 1;
   },
   [MT.Pass](state, payload) {
-    state.data[`${payload}Team`]
+    state.data.passes += 1;
   },
   [MT.Intercept](state, payload) {
-    state.data[`${payload}Team`]
+    state.data.goalKicks += 1;
   },
   [MT.Dribble](state, payload) {
-    state.data[`${payload}Team`]
+    state.data.dribbles += 1;
   },
 }
